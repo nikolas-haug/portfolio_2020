@@ -79,3 +79,13 @@ canvas {
         }
     }
 }
+
+.skills {
+
+    &__row {
+        padding: 5rem 0;
+        @media only screen and (max-width: $small) {
+            padding: 0;
+        }
+    }
+}

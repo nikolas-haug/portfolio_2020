@@ -1329,6 +1329,12 @@ kbd {
 .invisible {
   visibility: hidden; }
 
+.flex-dir-row {
+  flex-direction: row; }
+
+.flex-dir-col {
+  flex-direction: column; }
+
 .float-left {
   float: left; }
 
@@ -1568,3 +1574,9 @@ canvas {
     @media only screen and (max-width: 850px) {
       .about__img {
         max-width: 50%; } }
+
+.skills__row {
+  padding: 5rem 0; }
+  @media only screen and (max-width: 850px) {
+    .skills__row {
+      padding: 0; } }
