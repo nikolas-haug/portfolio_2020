@@ -1544,4 +1544,8 @@ canvas {
   .hero__marquee {
     position: relative;
     z-index: 9999;
-    margin-top: 7.5rem; }
+    margin-top: 7.5rem;
+    backdrop-filter: blur(8px); }
+  .hero__button {
+    padding: 2rem;
+    margin-right: 1rem; }

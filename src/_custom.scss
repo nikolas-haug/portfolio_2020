@@ -41,5 +41,12 @@ canvas {
         position: relative;
         z-index: 9999;
         margin-top: 7.5rem;
+
+        backdrop-filter: blur(8px); // This be the blur
+    }
+
+    &__button {
+        padding: 2rem;
+        margin-right: 1rem;
     }
 }
