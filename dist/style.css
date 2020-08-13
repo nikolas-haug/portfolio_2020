@@ -348,7 +348,7 @@ figure {
 html {
   font-size: 62.5%;
   font-family: "Roboto", "Arial", sans-serif;
-  color: #dedede; }
+  color: #4c4c4c; }
 
 body {
   line-height: 1.8;
@@ -373,7 +373,7 @@ h5 {
   font-family: "Roboto", "Arial", sans-serif;
   letter-spacing: 1px;
   line-height: 1.2;
-  color: #dedede; }
+  color: #4c4c4c; }
 
 h1 {
   font-size: 2.8rem; }
@@ -636,7 +636,7 @@ legend {
   font-weight: 600; }
 
 select {
-  color: #4c4c4c;
+  color: #fff;
   -webkit-appearance: none;
   -moz-appearance: none;
   line-height: 1.5; }
@@ -723,7 +723,7 @@ pre {
   background: #e5e5e5;
   padding: 1rem;
   tab-size: 2;
-  color: #dedede;
+  color: #4c4c4c;
   font-family: Menlo, monospace;
   font-size: 1.4rem;
   margin: 0 0 1.2rem 0; }
@@ -746,7 +746,7 @@ kbd {
   text-shadow: 0 1px 0 #fff; }
 
 :not(pre) > code {
-  color: #dedede;
+  color: #4c4c4c;
   background: #e5e5e5;
   font-family: Menlo, monospace;
   font-size: 1.4rem;
@@ -1545,7 +1545,26 @@ canvas {
     position: relative;
     z-index: 9999;
     margin-top: 7.5rem;
-    backdrop-filter: blur(8px); }
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1); }
+    .hero__marquee h2, .hero__marquee p {
+      color: #dedede; }
   .hero__button {
     padding: 2rem;
     margin-right: 1rem; }
+
+.about {
+  padding: 5rem 0; }
+  @media only screen and (max-width: 850px) {
+    .about__img-col {
+      order: -1; } }
+  .about__img-wrapper {
+    padding: 2.5rem; }
+    @media only screen and (max-width: 850px) {
+      .about__img-wrapper {
+        text-align: center; } }
+  .about__img {
+    border-radius: 50%; }
+    @media only screen and (max-width: 850px) {
+      .about__img {
+        max-width: 50%; } }

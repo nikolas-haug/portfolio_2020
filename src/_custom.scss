@@ -43,10 +43,39 @@ canvas {
         margin-top: 7.5rem;
 
         backdrop-filter: blur(8px); // This be the blur
+        box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+
+        h2, p {
+            color: $color-grey-light;
+        }
     }
 
     &__button {
         padding: 2rem;
         margin-right: 1rem;
+    }
+}
+
+.about {
+    padding: 5rem 0;
+
+    &__img-col {
+        @media only screen and (max-width: $small) {
+            order: -1;
+        }
+    }
+
+    &__img-wrapper {
+        padding: 2.5rem;
+        @media only screen and (max-width: $small) {
+            text-align: center;
+        }
+    }
+
+    &__img {
+        border-radius: 50%;
+        @media only screen and (max-width: $small) {
+            max-width: 50%;
+        }
     }
 }
