@@ -1,0 +1,45 @@
+/**
+*
+* THEME SPECIFIC COMPONENTS
+*
+*/
+
+body {
+  transition: background 0.3s;
+}
+
+body.dimmed {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+body.custom-background.dimmed {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+header {
+  border-bottom: 1px solid $color-grey-dark;
+  background: $color-grey-dark;
+}
+
+.nav-logo {
+    display: inline-block;
+    padding: 2rem 0;
+}
+
+// Styles for particles js canvas
+canvas {
+    position: absolute;
+    top: 0;
+}
+
+.hero {
+    background-color: $color-grey-dark;
+    min-height: 65rem;
+    clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
+
+    &__marquee {
+        position: relative;
+        z-index: 9999;
+        margin-top: 7.5rem;
+    }
+}
