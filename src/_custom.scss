@@ -16,7 +16,7 @@ body.custom-background.dimmed {
   background: rgba(0, 0, 0, 0.85);
 }
 
-header {
+.header {
   border-bottom: 1px solid $color-grey-dark;
   background: $color-grey-dark;
 }
@@ -37,13 +37,24 @@ canvas {
     min-height: 65rem;
     clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
 
+    @media only screen and (max-width: $small) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        min-height: 48rem;
+    }
+
     &__marquee {
         position: relative;
         z-index: 9999;
         margin-top: 7.5rem;
 
-        backdrop-filter: blur(8px); // This be the blur
-        box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(1rem); // This be the blur
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+        transition: all .3s;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+        }
 
         h2, p {
             color: $color-grey-light;
@@ -87,5 +98,22 @@ canvas {
         @media only screen and (max-width: $small) {
             padding: 0;
         }
+    }
+
+    &__icon {
+        width: 5rem;
+    }
+}
+
+.contact {
+    padding: 5rem 0;
+}
+
+.footer {
+    padding: 5rem 0;
+    background-color: $color-grey-dark;
+
+    &__copy {
+        color: $color-grey-light;
     }
 }

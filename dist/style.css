@@ -1531,7 +1531,7 @@ body.dimmed {
 body.custom-background.dimmed {
   background: rgba(0, 0, 0, 0.85); }
 
-header {
+.header {
   border-bottom: 1px solid #4c4c4c;
   background: #4c4c4c; }
 
@@ -1547,12 +1547,20 @@ canvas {
   background-color: #4c4c4c;
   min-height: 65rem;
   clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%); }
+  @media only screen and (max-width: 850px) {
+    .hero {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      min-height: 48rem; } }
   .hero__marquee {
     position: relative;
     z-index: 9999;
     margin-top: 7.5rem;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1); }
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    transition: all .3s; }
+    .hero__marquee:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }
     .hero__marquee h2, .hero__marquee p {
       color: #dedede; }
   .hero__button {
@@ -1580,3 +1588,15 @@ canvas {
   @media only screen and (max-width: 850px) {
     .skills__row {
       padding: 0; } }
+
+.skills__icon {
+  width: 5rem; }
+
+.contact {
+  padding: 5rem 0; }
+
+.footer {
+  padding: 5rem 0;
+  background-color: #4c4c4c; }
+  .footer__copy {
+    color: #dedede; }
