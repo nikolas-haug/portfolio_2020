@@ -59,6 +59,10 @@ canvas {
         h2, p {
             color: $color-grey-light;
         }
+
+        @media only screen and (max-width: $small) {
+            box-shadow: none;
+        }
     }
 
     &__button {

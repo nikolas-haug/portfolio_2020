@@ -1563,6 +1563,9 @@ canvas {
       box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }
     .hero__marquee h2, .hero__marquee p {
       color: #dedede; }
+    @media only screen and (max-width: 850px) {
+      .hero__marquee {
+        box-shadow: none; } }
   .hero__button {
     padding: 2rem;
     margin-right: 1rem; }
