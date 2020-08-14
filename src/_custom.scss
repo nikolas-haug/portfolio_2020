@@ -82,12 +82,16 @@ canvas {
 
     &__img-wrapper {
         padding: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @media only screen and (max-width: $small) {
             text-align: center;
         }
     }
 
     &__img {
+        max-width: 75%;
         border-radius: 50%;
         @media only screen and (max-width: $small) {
             max-width: 50%;

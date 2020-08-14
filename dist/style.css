@@ -1576,11 +1576,15 @@ canvas {
     .about__img-col {
       order: -1; } }
   .about__img-wrapper {
-    padding: 2.5rem; }
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     @media only screen and (max-width: 850px) {
       .about__img-wrapper {
         text-align: center; } }
   .about__img {
+    max-width: 75%;
     border-radius: 50%; }
     @media only screen and (max-width: 850px) {
       .about__img {
