@@ -74,6 +74,14 @@ canvas {
 .about {
     padding: 5rem 0;
 
+    &__text {
+        opacity: 0;
+        transform: translateX(-75rem);
+        transition: transform .8s .25s ease-out,
+                    opacity .8s .25s ease-out;
+        will-change: transform, opacity;
+    }
+
     &__img-col {
         @media only screen and (max-width: $small) {
             order: -1;
@@ -93,6 +101,11 @@ canvas {
     &__img {
         max-width: 75%;
         border-radius: 50%;
+        opacity: 0;
+        transform: translateX(75rem);
+        transition: transform .8s .25s ease-out,
+                    opacity .8s .25s ease-out;
+        will-change: transform, opacity;
         @media only screen and (max-width: $small) {
             max-width: 50%;
         }
@@ -146,7 +159,7 @@ canvas {
         height: 100%;
         background: rgba($color: $color-grey-dark, $alpha: .85);
         opacity: 0;
-        transition: all .3s;
+        transition: all .5s;
     }
 
     &__overlay-button {
@@ -167,4 +180,10 @@ canvas {
     &__copy {
         color: $color-grey-light;
     }
+}
+
+// Show on scroll animation
+.is-visible {
+    opacity: 1;
+    transform: translateX(0);
 }
