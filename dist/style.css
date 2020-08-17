@@ -1571,7 +1571,9 @@ canvas {
     margin-right: 1rem; }
 
 .about {
-  padding: 5rem 0; }
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden; }
   .about__text {
     opacity: 0;
     transform: translateX(-75rem);

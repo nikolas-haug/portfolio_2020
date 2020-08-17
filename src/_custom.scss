@@ -73,6 +73,8 @@ canvas {
 
 .about {
     padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
 
     &__text {
         opacity: 0;
