@@ -113,6 +113,49 @@ canvas {
     }
 }
 
+.portfolio {
+
+    &__heading {
+
+    }
+
+    &__overlay-container {
+        position: relative;
+        font-size: 0;
+
+        &:hover .portfolio__image-overlay {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &:hover .portfolio__overlay-button {
+            transform: translateY(5rem);
+            opacity: 1;
+        }
+    }
+
+    &__image {
+        position: relative;
+    }
+
+    &__image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: $color-grey-dark, $alpha: .85);
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    &__overlay-button {
+        transform: translateY(10rem);
+        opacity: 0;
+        transition: all .1s;
+    }
+}
+
 .contact {
     padding: 5rem 0;
 }
