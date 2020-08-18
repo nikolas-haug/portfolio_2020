@@ -17,7 +17,7 @@ body.custom-background.dimmed {
 }
 
 %sections {
-    padding-top: 5rem;
+    padding-top: 10rem;
 }
 
 .header {
@@ -92,7 +92,7 @@ canvas {
 
 .about {
     @extend %sections;
-    padding: 5rem 0;
+    padding-bottom: 5rem;
     position: relative;
     overflow: hidden;
 
@@ -151,6 +151,7 @@ canvas {
 }
 
 .portfolio {
+    @extend %sections;
 
     &__heading {
 
@@ -194,7 +195,8 @@ canvas {
 }
 
 .contact {
-    padding: 5rem 0;
+    @extend %sections;
+    padding-bottom: 5rem;
 }
 
 .footer {

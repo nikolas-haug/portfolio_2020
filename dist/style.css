@@ -1531,8 +1531,8 @@ body.dimmed {
 body.custom-background.dimmed {
   background: rgba(0, 0, 0, 0.85); }
 
-.hero, .about {
-  padding-top: 5rem; }
+.hero, .about, .portfolio, .contact {
+  padding-top: 10rem; }
 
 .header {
   position: fixed;
@@ -1587,7 +1587,7 @@ canvas {
     margin-right: 1rem; }
 
 .about {
-  padding: 5rem 0;
+  padding-bottom: 5rem;
   position: relative;
   overflow: hidden; }
   .about__text {
@@ -1656,7 +1656,7 @@ canvas {
   transition: all .3s; }
 
 .contact {
-  padding: 5rem 0; }
+  padding-bottom: 5rem; }
 
 .footer {
   padding: 5rem 0;
