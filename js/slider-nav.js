@@ -12,6 +12,7 @@
 		// add 'dimmed' class to body background
 		document.body.classList.toggle('dimmed');
 	});
+	
 	// Helper Function - check for all children of an element
 	function isDescendantOrSelf(parent, child) {
 		let node = child;
