@@ -1531,9 +1531,17 @@ body.dimmed {
 body.custom-background.dimmed {
   background: rgba(0, 0, 0, 0.85); }
 
+.hero, .about {
+  padding-top: 5rem; }
+
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
   border-bottom: 1px solid #4c4c4c;
-  background: #4c4c4c; }
+  background: #4c4c4c;
+  background: #222;
+  transition: position .5s ease-out; }
 
 .nav-logo {
   display: inline-block;
@@ -1541,12 +1549,19 @@ body.custom-background.dimmed {
 
 canvas {
   position: absolute;
-  top: 0; }
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .hero {
+  position: relative;
   background-color: #4c4c4c;
-  min-height: 65rem;
-  clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%); }
+  background-color: rebeccapurple;
+  min-height: 75rem;
+  clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
+  transition: clip-path .7s ease-out; }
   @media only screen and (max-width: 850px) {
     .hero {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -1555,6 +1570,7 @@ canvas {
     position: relative;
     z-index: 9999;
     margin-top: 7.5rem;
+    background: rgba(155, 155, 155, 0.3);
     backdrop-filter: blur(1rem);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
     transition: all .3s; }
@@ -1594,8 +1610,9 @@ canvas {
     max-width: 75%;
     border-radius: 50%;
     opacity: 0;
+    box-shadow: 40px 0 13px orange;
     transform: translateX(75rem);
-    transition: transform .8s .25s ease-out, opacity .8s .25s ease-out;
+    transition: transform .8s .25s ease-out, opacity .8s .25s ease-out, box-shadow .8s .25s ease-out;
     will-change: transform, opacity; }
     @media only screen and (max-width: 850px) {
       .about__img {
@@ -1631,12 +1648,12 @@ canvas {
   height: 100%;
   background: rgba(76, 76, 76, 0.85);
   opacity: 0;
-  transition: all .5s; }
+  transition: all .8s; }
 
 .portfolio__overlay-button {
   transform: translateY(10rem);
   opacity: 0;
-  transition: all .1s; }
+  transition: all .3s; }
 
 .contact {
   padding: 5rem 0; }
@@ -1649,4 +1666,23 @@ canvas {
 
 .is-visible {
   opacity: 1;
-  transform: translateX(0); }
+  transform: translateX(0);
+  box-shadow: none; }
+
+.header--sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  transform: translate(0, -20rem); }
+
+.header--in-view {
+  transform: translate(0, 0);
+  transition: all .7s; }
+
+.reset-clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+
+@keyframes adjust-clip-path {
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
