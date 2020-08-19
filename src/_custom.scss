@@ -50,7 +50,6 @@ canvas {
   @extend %sections;
     position: relative;
     background-color: $color-grey-dark;
-    background-color: rebeccapurple;
     min-height: 75rem;
     clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
     transition: clip-path .7s ease-out;
@@ -215,27 +214,7 @@ canvas {
     box-shadow: none;
 }
 
-.header--sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 99999;
-    transform: translate(0, -20rem);
-}
-
-.header--in-view {
-    transform: translate(0, 0);
-    transition: all .7s;
-}
-
 // Animation classes
 .reset-clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-// Keyframes
-@keyframes adjust-clip-path {
-    100% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
 }
