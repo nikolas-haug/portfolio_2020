@@ -162,10 +162,12 @@ canvas {
     &__overlay-container {
         position: relative;
         font-size: 0;
+        border-radius: .5rem;
 
         &:hover .portfolio__image-overlay {
             opacity: 1;
             cursor: pointer;
+            border-radius: .5rem;
         }
 
         &:hover .portfolio__overlay-button {
@@ -176,6 +178,7 @@ canvas {
 
     &__image {
         position: relative;
+        border-radius: .5rem;
     }
 
     &__image-overlay {
@@ -187,9 +190,11 @@ canvas {
         background: rgba($color: $color-grey-dark, $alpha: .85);
         opacity: 0;
         transition: all .8s;
+        border-radius: .5rem;
     }
 
     &__overlay-button {
+        background: $color-grey-light;
         transform: translateY(10rem);
         opacity: 0;
         transition: all .3s;
