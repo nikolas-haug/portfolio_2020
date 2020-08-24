@@ -27,8 +27,7 @@ body.custom-background.dimmed {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  padding: 1rem;
-  border-bottom: 1px solid $color-grey-dark;
+  padding: 1rem 0;
   background: $color-grey-dark;
   transition: all .7s ease-out;
 }

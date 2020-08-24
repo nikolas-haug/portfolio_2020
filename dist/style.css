@@ -1541,8 +1541,7 @@ body.custom-background.dimmed {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  padding: 1rem;
-  border-bottom: 1px solid #4c4c4c;
+  padding: 1rem 0;
   background: #4c4c4c;
   transition: all .7s ease-out; }
 
