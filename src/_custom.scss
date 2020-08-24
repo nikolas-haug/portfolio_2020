@@ -30,7 +30,7 @@ body.custom-background.dimmed {
 
   border-bottom: 1px solid $color-grey-dark;
   background: $color-grey-dark;
-  background: #222;
+//   background: #222;
   transition: position .5s ease-out;
 }
 
@@ -126,7 +126,6 @@ canvas {
         max-width: 75%;
         border-radius: 50%;
         opacity: 0;
-        box-shadow: 40px 0 13px orange;
         transform: translateX(75rem);
         transition: transform .8s .25s ease-out,
                     opacity .8s .25s ease-out,
@@ -215,23 +214,19 @@ canvas {
     }
 }
 
-// Show on scroll animation
-.is-visible {
-    // opacity: 1;
-    // transform: translateX(0);
-    // box-shadow: none;
-    animation: slide-in 2s ease-in forwards;
-}
-
-@keyframes slide-in {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-        box-shadow: none;
-    }
-}
-
 // Animation classes
 .reset-clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.is-visible {
+    animation: no-transform 1s cubic-bezier(.69,.01,.32,1.14) forwards;
+}
+
+// Animations
+@keyframes no-transform {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

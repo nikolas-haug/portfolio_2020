@@ -10,7 +10,8 @@
             if(isElementInViewport(element)) {
                 element.classList.add('is-visible');
             } else {
-                element.classList.remove('is-visible');
+                // Keep class for single animation
+                // element.classList.remove('is-visible');
             }
         });
         // Clip path animation
