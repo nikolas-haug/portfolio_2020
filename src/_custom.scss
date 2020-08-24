@@ -27,11 +27,15 @@ body.custom-background.dimmed {
   position: fixed;
   width: 100%;
   z-index: 9999;
-
+  padding: 1rem;
   border-bottom: 1px solid $color-grey-dark;
   background: $color-grey-dark;
-//   background: #222;
-  transition: position .5s ease-out;
+  transition: all .7s ease-out;
+}
+
+.header.header-expand {
+    padding: 0;
+    background: #222;
 }
 
 .nav-logo {
