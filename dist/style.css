@@ -1575,6 +1575,7 @@ canvas {
     position: relative;
     z-index: 9999;
     margin-top: 7.5rem;
+    border-radius: .5rem;
     background: rgba(155, 155, 155, 0.3);
     backdrop-filter: blur(1rem);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
@@ -1645,7 +1646,9 @@ canvas {
 
 .portfolio__image {
   position: relative;
-  border-radius: .5rem; }
+  border-radius: .5rem;
+  opacity: 0;
+  transform: scale(0); }
 
 .portfolio__image-overlay {
   position: absolute;
@@ -1679,7 +1682,21 @@ canvas {
 .is-visible {
   animation: no-transform 1s cubic-bezier(0.69, 0.01, 0.32, 1.14) forwards; }
 
+.fade-in {
+  animation: FadeIn .7s linear forwards; }
+
 @keyframes no-transform {
   to {
     opacity: 1;
     transform: translateX(0); } }
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  85% {
+    opacity: 1;
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }

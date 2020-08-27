@@ -69,6 +69,7 @@ canvas {
         position: relative;
         z-index: 9999;
         margin-top: 7.5rem;
+        border-radius: .5rem;
 
         background: rgba(155, 155, 155, .3);
         backdrop-filter: blur(1rem); // This be the blur
@@ -181,6 +182,8 @@ canvas {
     &__image {
         position: relative;
         border-radius: .5rem;
+        opacity: 0;
+        transform: scale(0);
     }
 
     &__image-overlay {
@@ -226,6 +229,11 @@ canvas {
     animation: no-transform 1s cubic-bezier(.69,.01,.32,1.14) forwards;
 }
 
+.fade-in {
+    animation: FadeIn .7s linear forwards;
+    
+}
+
 // Animations
 @keyframes no-transform {
     to {
@@ -233,3 +241,19 @@ canvas {
         transform: translateX(0);
     }
 }
+
+@keyframes FadeIn { 
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  
+    85% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

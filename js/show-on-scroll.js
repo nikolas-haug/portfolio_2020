@@ -4,6 +4,9 @@
     const header = document.querySelector('.header');
     const hero = document.querySelector('.hero');
     const sticky = header.offsetHeight;
+
+    const galleryImages = document.querySelectorAll('.portfolio__image');
+    console.log(galleryImages);
     
     function loop() {
         // Sliding conent
@@ -15,6 +18,14 @@
                 // element.classList.remove('is-visible');
             }
         });
+
+        // Gallery animation
+        galleryImages.forEach(function(image) {
+            if(isElementInViewport(image)) {
+                image.classList.add('fade-in');
+            }
+        });
+
         // Clip path animation
         if(window.pageYOffset >= sticky) {
             header.classList.add('header-expand');
